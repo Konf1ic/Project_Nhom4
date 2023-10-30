@@ -13,16 +13,19 @@
 </head>
 <body>
 <h1>Form edit</h1>
-<button><a href="/ecommerce">Back to list</a></button>
-<form method="post" >
-    <input type="hidden" name="id" value="<c:out value='${staff.id}' />">
-    <input type="text" name="name" value="<c:out value='${staff.name}' />">
-    <input type="text" name="password" value="<c:out value='${staff.password}' />">
-    <input type="text" name="email" value="<c:out value='${staff.email}' />">
-    <input type="text" name="age" value="<c:out value='${staff.age}' />">
-    <input type="text" name="phone_number" value="<c:out value='${staff.phone_number}' />">
-    <input type="text" name="address" value="<c:out value='${staff.address}' />">
-    <button type="submit">Update</button>
+<button><a href="/ecommerce?action=edit">Back to list</a></button>
+<form method="post">
+    <div style="text-align: center">
+        <input type="hidden" name="id" value="<c:out value='${staff.id}' />">
+        Name : <input type="text" name="name" value="<c:out value='${staff.name}' />">
+        Password : <input type="text" name="password" value="<c:out value='${staff.password}' />">
+        Email : <input type="text" name="email" value="<c:out value='${staff.email}' />">
+        Age : <input type="text" name="age" value="<c:out value='${staff.age}' />">
+        Phone_number : <input type="text" name="phone_number" value="<c:out value='${staff.phone_number}' />">
+        Address : <input type="text" name="address" value="<c:out value='${staff.address}' />">
+        Wage :  <input type="number" name="wage" value="<c:out value='${staff.wage}' />">
+        <button type="submit">Update</button>
+    </div>
 </form>
 </body>
 </html>

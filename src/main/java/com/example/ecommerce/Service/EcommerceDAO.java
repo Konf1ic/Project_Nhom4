@@ -25,20 +25,20 @@ public class EcommerceDAO implements EcommerceService {
     private static final String INSERT_account_buyer_SQL = "INSERT INTO account_buyer (username, password, email, age, phone_number, address) VALUES (?, ?, ?, ?, ?, ?);";
     private static final String INSERT_account_staff_SQL = "INSERT INTO account_staff (username, password, email, name, age,phone_number,address) VALUES (?, ?, ?, ?, ?, ?, ?);";
     private static final String INSERT_account_supplier_SQL = "INSERT INTO account_supplier (username, password, email, age,phone_number,address) VALUES (?, ?, ?, ?, ?, ?);";
-     private static final String UPDATE_USERS_account_staff_SQL ="update account_staff set name = ?, password = ? , email = ?, age= ?, phone_number = ?,address = ? where id = ?";
+     private static final String UPDATE_account_staff_SQL ="update account_staff set name = ?, password = ? , email = ?, age= ?, phone_number = ?,address = ?, wage = ? where id = ?";
+     private static final  String ADIM_ADD_account_staff_SQL ="INSERT INTO account_staff(username,password,email,name,age,phone_number,address,wage) VALUES(?,?,?,?,?,?,?,?)";
     private static final String SELECT_ALL = "select * from ";
 
     @Override
     public void insertAccount_buyer(Ecommerce ecommerce) {
         try {
             Connection connection = getConnection();
-
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_account_buyer_SQL);
             preparedStatement.setString(1, ecommerce.getUsername());
             preparedStatement.setString(2, ecommerce.getPassword());
             preparedStatement.setString(3, ecommerce.getEmail());
             preparedStatement.setInt(4, ecommerce.getAge());
-            preparedStatement.setInt(5, ecommerce.getPhone_number());
+            preparedStatement.setString(5, ecommerce.getPhone_number());
             preparedStatement.setString(6, ecommerce.getAddress());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -59,7 +59,7 @@ public class EcommerceDAO implements EcommerceService {
         preparedStatement.setString(3, ecommerce.getEmail());
         preparedStatement.setString(4, ecommerce.getName());
         preparedStatement.setInt(5, ecommerce.getAge());
-        preparedStatement.setInt(6, ecommerce.getPhone_number());
+        preparedStatement.setString(6, ecommerce.getPhone_number());
         preparedStatement.setString(7, ecommerce.getAddress());
         preparedStatement.executeUpdate();
 
@@ -75,7 +75,7 @@ public class EcommerceDAO implements EcommerceService {
             preparedStatement.setString(2, ecommerce.getPassword());
             preparedStatement.setString(3, ecommerce.getEmail());
             preparedStatement.setInt(4, ecommerce.getAge());
-            preparedStatement.setInt(5, ecommerce.getPhone_number());
+            preparedStatement.setString(5, ecommerce.getPhone_number());
             preparedStatement.setString(6, ecommerce.getAddress());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -102,7 +102,7 @@ public class EcommerceDAO implements EcommerceService {
             String password = resultSet1.getString("password");
             String email = resultSet1.getString("email");
             int age = resultSet1.getInt("age");
-            int phone_number = resultSet1.getInt("phone_number");
+            String phone_number = resultSet1.getString("phone_number");
             String address = resultSet1.getString("address");
 
             list.add(new Ecommerce(id, username, password, email, age, phone_number, address));
@@ -119,7 +119,7 @@ public class EcommerceDAO implements EcommerceService {
             String password = resultSet2.getString("password");
             String email = resultSet2.getString("email");
             int age = resultSet2.getInt("age");
-            int phone_number = resultSet2.getInt("phone_number");
+            String phone_number = resultSet2.getString("phone_number");
             String address = resultSet2.getString("address");
             list.add(new Ecommerce(id, username, password, email, age, phone_number, address));
         }
@@ -135,7 +135,7 @@ public class EcommerceDAO implements EcommerceService {
             String password = resultSet3.getString("password");
             String email = resultSet3.getString("email");
             int age = resultSet3.getInt("age");
-            int phone_number = resultSet3.getInt("phone_number");
+            String phone_number = resultSet3.getString("phone_number");
             String address = resultSet3.getString("address");
             list.add(new Ecommerce(id, username, password, email, age, phone_number, address));
         }
@@ -146,14 +146,15 @@ public class EcommerceDAO implements EcommerceService {
     public boolean UpDateAccount_staff(Ecommerce ecommerce) throws SQLException, ClassNotFoundException {
         boolean rowUpdated;
         Connection connection = getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_account_staff_SQL);
+        PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_account_staff_SQL);
         preparedStatement.setString(1,ecommerce.getName());
         preparedStatement.setString(2,ecommerce.getPassword());
         preparedStatement.setString(3,ecommerce.getEmail());
         preparedStatement.setInt(4,ecommerce.getAge());
-        preparedStatement.setInt(5,ecommerce.getPhone_number());
+        preparedStatement.setString(5,ecommerce.getPhone_number());
         preparedStatement.setString(6,ecommerce.getAddress());
-        preparedStatement.setInt(7,ecommerce.getId());
+        preparedStatement.setDouble(7,ecommerce.getWage());
+        preparedStatement.setInt(8,ecommerce.getId());
         rowUpdated = preparedStatement.executeUpdate()>0;
         return rowUpdated;
     }
@@ -171,10 +172,25 @@ public class EcommerceDAO implements EcommerceService {
             String password = resultSet3.getString("password");
             String email = resultSet3.getString("email");
             int age = resultSet3.getInt("age");
-            int phone_number = resultSet3.getInt("phone_number");
+            String phone_number = resultSet3.getString("phone_number");
             String address = resultSet3.getString("address");
             ecommerce = new Ecommerce(id, name, password, email, age, phone_number, address);
         }
         return ecommerce;
+    }
+
+    @Override
+    public void addStaffWithAdmin(Ecommerce ecommerce) throws SQLException, ClassNotFoundException {
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(ADIM_ADD_account_staff_SQL);
+        preparedStatement.setString(1, ecommerce.getUsername());
+        preparedStatement.setString(2, ecommerce.getPassword());
+        preparedStatement.setString(3, ecommerce.getEmail());
+        preparedStatement.setString(4,ecommerce.getName());
+        preparedStatement.setInt(5, ecommerce.getAge());
+        preparedStatement.setString(6, ecommerce.getPhone_number());
+        preparedStatement.setString(7, ecommerce.getAddress());
+        preparedStatement.setDouble(8, ecommerce.getWage());
+        preparedStatement.executeUpdate();
     }
 }

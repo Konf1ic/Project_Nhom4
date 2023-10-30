@@ -8,12 +8,13 @@ public class Ecommerce
     private String email;
     private String name;
     private int age;
-    private int phone_number;
+    private String phone_number;
     private String address;
+    private Double wage;
 
     public Ecommerce(){}
 
-    public Ecommerce(int id, String username, String password, String email, String name, int age, int phone_number, String address)
+    public Ecommerce(int id, String username, String password, String email, String name, int age, String phone_number, String address)
     {
         this.id = id;
         this.username = username;
@@ -25,7 +26,18 @@ public class Ecommerce
         this.address = address;
     }
 
-    public Ecommerce(int id, String name, String password, String email, int age, int phone_number, String address)
+    public Ecommerce(int id, String password, String email, String name, int age, String phone_number, String address, Double wage) {
+        this.id = id;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.age = age;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.wage = wage;
+    }
+
+    public Ecommerce(int id, String name, String password, String email, int age, String phone_number, String address)
     {
         this.id = id;
         this.name = name;
@@ -36,7 +48,7 @@ public class Ecommerce
         this.address = address;
     }
 
-    public Ecommerce(String username, String password, String email, int age, int phone_number, String address)
+    public Ecommerce(String username, String password, String email, int age, String phone_number, String address)
     {
         this.username = username;
         this.password = password;
@@ -46,7 +58,7 @@ public class Ecommerce
         this.address = address;
     }
 
-    public Ecommerce(String username, String password, String email, String name, int age, int phoneNumber, String address)
+    public Ecommerce(String username, String password, String email, String name, int age, String phoneNumber, String address)
     {
         this.username = username;
         this.password = password;
@@ -55,6 +67,29 @@ public class Ecommerce
         this.age = age;
         this.phone_number = phoneNumber;
         this.address = address;
+    }
+
+    public Ecommerce(int id, String username, String password, String email, String name, int age, String phone_number, String address, Double wage) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.age = age;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.wage = wage;
+    }
+
+    public Ecommerce(String username, String password, String email, String name, int age, String phone_number, String address, Double wage) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.age = age;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.wage = wage;
     }
 
     public int getId()
@@ -118,12 +153,12 @@ public class Ecommerce
         this.age = age;
     }
 
-    public int getPhone_number()
+    public String getPhone_number()
     {
         return phone_number;
     }
 
-    public void setPhone_number(int phone_number)
+    public void setPhone_number(String phone_number)
     {
         this.phone_number = phone_number;
     }
@@ -136,5 +171,13 @@ public class Ecommerce
     public void setAddress(String address)
     {
         this.address = address;
+    }
+
+    public Double getWage() {
+        return wage;
+    }
+
+    public void setWage(Double wage) {
+        this.wage = wage;
     }
 }

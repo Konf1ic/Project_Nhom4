@@ -12,5 +12,6 @@
 </head>
 <body>
 <button><a href="/ecommerce?action=edit&id=2">Edit</a></button>
+<button><a href="/ecommerce?action=add">Add new staff</a></button>
 </body>
 </html>
