@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="19" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/apache-tomcat-9.0.80" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/apache-tomcat-9.0.80/apache-tomcat-9.0.80/webapps/docs/appdev/sample/src" />
+          <root url="file://$USER_HOME$/Downloads/apache-tomcat-9.0.80/apache-tomcat-9.0.80/webapps/examples/WEB-INF/classes" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
