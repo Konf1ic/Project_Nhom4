@@ -171,13 +171,13 @@
 <div class="bottom-container">
     <div class="row">
         <div class="col">
-            <a href="SignUp.jsp" style="color:white" class="btn">Sign up</a>
+            <a href="signup.jsp" style="color:white" class="btn">Sign up</a>
         </div>
         <div class="col">
             <a href="#" style="color:white" class="btn">Forgot password?</a>
         </div>
     </div>
-        <a href="Home_page.jsp" style="color:white" class="btn">Home</a>
+        <a href="home_page.jsp" style="color:white" class="btn">Home</a>
 </div>
 
 </body>
