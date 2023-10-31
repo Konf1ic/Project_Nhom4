@@ -87,6 +87,9 @@
 
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+    <label for="role"><b>Role</b></label>
+    <input type="text" placeholder="Enter your role" name="role" id="role" required>
     <hr>
     <button type="submit" class="registerbtn">Register</button>
   </div>
