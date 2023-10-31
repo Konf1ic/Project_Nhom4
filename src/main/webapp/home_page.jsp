@@ -262,8 +262,8 @@
 <header>
     <h2 class="logo">Logo</h2>
     <nav class="navigation">
-        <a href="SignIn.jsp" class="btn btnLogin-popup">Sign in</a>
-        <a href="SignUp.jsp" class="btn btnRegister-popup">Sign Up</a>
+        <a href="signin.jsp" class="btn btnLogin-popup">Sign in</a>
+        <a href="signup.jsp" class="btn btnRegister-popup">Sign Up</a>
     </nav>
 </header>
 <div id="content-container"></div>
