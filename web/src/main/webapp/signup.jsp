@@ -97,8 +97,8 @@
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-        <label for="username"><b>Posion</b></label>
-        <input type="text" placeholder="Enter Position" name="position" id="position" required>
+        <label for="role"><b>Role</b></label>
+        <input type="text" placeholder="Enter your Role" name="role" id="role" required>
 
         <input type="hidden" name="action"  value="register">
         <input type="submit" value="Register">
