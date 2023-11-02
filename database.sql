@@ -1,22 +1,23 @@
-create database accounts;
+create database ecommerces;
 
-use accounts;
+use ecommerces;
 
-create table accounts(
+create table ecommerces(
 id int auto_increment primary key,
 username varchar(255) not null unique,
 password varchar(255) not null,
 name varchar(255) not null,
 age int check (age > 18 and age < 60),
-phoneNumber varchar(20) not null,
+phone_number varchar(20) not null,
 address varchar(255) not null,
-salary decimal(10, 2) check (salary > 0 AND salary < 100000000)
+wage decimal(10, 2) check (wage > 0 AND salary < 100000000)
+position varchar(50) not null
  );
  
  -- Them tk
-INSERT INTO accounts (username, password, email, name, age, phoneNumber, address, salary) 
+INSERT INTO ecommerces (username, password, email, name, age, phone_number, address, wage) 
 VALUES ('newUsername', '123456@Abc', 'newEmail', 'newName', 30, 'newPhoneNumber', 'newAddress', 50000.00);
 
 -- Tim theo name hoac user
-SELECT * FROM accounts WHERE username LIKE '%searchTerm%' OR name LIKE '%searchTerm%';
+SELECT * FROM ecommerces WHERE username LIKE '%searchTerm%' OR name LIKE '%searchTerm%';
 
