@@ -11,8 +11,8 @@ name varchar(50) unique,
 age int check (age > 18 and age < 60),
 phone_number varchar(11),
 address varchar(255),
-wage int not null,
+wage int,
 position varchar(50) not null
  );
  
-ALTER TABLE ecommerce ADD CONSTRAINT Luong CHECK (wage>0 && wage<100000000)
+ALTER TABLE ecommerces ADD CONSTRAINT Luong CHECK (wage >0 && wage<100000000)
