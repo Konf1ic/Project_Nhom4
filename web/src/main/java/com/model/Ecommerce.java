@@ -41,6 +41,17 @@ public class Ecommerce {
         this.position = position;
     }
 
+    public Ecommerce(String username, String password, String email, String name, int age, String phone_number, String address, int wage) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.age = age;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.wage = wage;
+    }
+
     public int getId() {
         return id;
     }

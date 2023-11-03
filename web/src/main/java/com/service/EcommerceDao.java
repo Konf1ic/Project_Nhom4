@@ -22,6 +22,8 @@ public class EcommerceDao implements EcommerceIDAO{
     }
 
     private static final String UPDATE_STAFF_SQL ="update ecommerce set name = ?, password = ? , email = ?, age= ?, phone_number = ?,address = ?, wage = ? , position = ?  where id = ?";
+    private static final  String ADMIN_ADD_STAFF_SQL ="INSERT INTO ecommerce (username,password,email,name,age,phone_number,address,wage) VALUES(?,?,?,?,?,?,?,?)";
+
     @Override
     public List<Ecommerce> searchAccount(String name) throws SQLException, ClassNotFoundException {
 
@@ -64,6 +66,22 @@ public class EcommerceDao implements EcommerceIDAO{
         System.out.println("okkk");
         return rowUpdate;
     }
+
+    @Override
+    public void addStaffWithAdmin(Ecommerce ecommerce) throws SQLException, ClassNotFoundException {
+        Connection connection = getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(ADMIN_ADD_STAFF_SQL);
+        preparedStatement.setString(1, ecommerce.getUsername());
+        preparedStatement.setString(2, ecommerce.getPassword());
+        preparedStatement.setString(3, ecommerce.getEmail());
+        preparedStatement.setString(4,ecommerce.getName());
+        preparedStatement.setInt(5, ecommerce.getAge());
+        preparedStatement.setString(6, ecommerce.getPhone_number());
+        preparedStatement.setString(7, ecommerce.getAddress());
+        preparedStatement.setDouble(8, ecommerce.getWage());
+        preparedStatement.executeUpdate();
+    }
+
 
     @Override
     public Ecommerce findEcommerceById(int editID) throws SQLException, ClassNotFoundException {
