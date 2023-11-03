@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class UserDAO implements UserService {
     private String jdbcURL = "jdbc:mysql://localhost:3306/ecommerces";
     private String jdbcUsername = "root";
-    private String jdbcPassword = "slogoman";
+    private String jdbcPassword = "Mk Database của mình";
 
     public UserDAO() {
     }
