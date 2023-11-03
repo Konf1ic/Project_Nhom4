@@ -21,15 +21,15 @@ public class EcommerceDao implements EcommerceIDAO{
         return connection;
     }
 
-    private static final String UPDATE_STAFF_SQL ="update ecommerce set name = ?, password = ? , email = ?, age= ?, phone_number = ?,address = ?, wage = ? , position = ?  where id = ?";
-    private static final  String ADMIN_ADD_STAFF_SQL ="INSERT INTO ecommerce (username,password,email,name,age,phone_number,address,wage) VALUES(?,?,?,?,?,?,?,?)";
+    private static final String UPDATE_STAFF_SQL ="update ecommerces set name = ?, password = ? , email = ?, age= ?, phone_number = ?,address = ?, wage = ? , position = ?  where id = ?";
+    private static final  String ADMIN_ADD_STAFF_SQL ="INSERT INTO ecommerces (username,password,email,name,age,phone_number,address,wage) VALUES(?,?,?,?,?,?,?,?)";
 
     @Override
     public List<Ecommerce> searchAccount(String name) throws SQLException, ClassNotFoundException {
 
         List<Ecommerce> list = new ArrayList<>();
         Connection connection = getConnection();
-        String query = "select * from ecommerce where username like ?";
+        String query = "select * from ecommerces where username like ?";
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, "%" + name + "%");
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -63,7 +63,6 @@ public class EcommerceDao implements EcommerceIDAO{
         preparedStatement.setDouble(7,ecommerce.getWage());
         preparedStatement.setString(8,ecommerce.getPosition());
         rowUpdate = preparedStatement.executeUpdate()>0;
-        System.out.println("okkk");
         return rowUpdate;
     }
 
@@ -78,21 +77,21 @@ public class EcommerceDao implements EcommerceIDAO{
         preparedStatement.setInt(5, ecommerce.getAge());
         preparedStatement.setString(6, ecommerce.getPhone_number());
         preparedStatement.setString(7, ecommerce.getAddress());
-        preparedStatement.setDouble(8, ecommerce.getWage());
+        preparedStatement.setInt(8, ecommerce.getWage());
         preparedStatement.executeUpdate();
     }
 
 
     @Override
     public Ecommerce findEcommerceById(int editID) throws SQLException, ClassNotFoundException {
-        String query = "select * from ecommerce where id = ?";
+        String query = "select * from ecommerces where id = ?";
         PreparedStatement preparedStatement = getConnection().prepareStatement(query);
         preparedStatement.setInt(1,editID);
         Ecommerce ecommerce = null;
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()){
             int id = resultSet.getInt("id");
-            String name  = resultSet.getString("name");
+            String username  = resultSet.getString("username");
             String password  = resultSet.getString("password");
             String email = resultSet.getString("email");
             int age = resultSet.getInt("age");
@@ -100,8 +99,7 @@ public class EcommerceDao implements EcommerceIDAO{
             String address = resultSet.getString("address");
             int wage = resultSet.getInt("wage");
             String position = resultSet.getString("position");
-            ecommerce = new Ecommerce(id,name,password,email,age,phone_number,address,wage,position);
-
+            ecommerce = new Ecommerce(id,username,password,email,age,phone_number,address,wage,position);
         }
         return ecommerce;
     }

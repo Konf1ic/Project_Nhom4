@@ -10,7 +10,6 @@ public class Ecommerce {
     private String phone_number;
     private String address;
     private int wage;
-
     private String position;
 
     public Ecommerce() {
