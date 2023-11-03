@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet(name = "UserServlet", value = "/user")
-public class SignInServlet extends HttpServlet {
+public class SignUpServlet extends HttpServlet {
     private UserService userService;
 
     @Override
