@@ -87,7 +87,7 @@
         <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <input type="text" placeholder="Enter Email" name="email" id="email" pattern="[^@\s]+@gmail\.com" title="Vui lòng nhập địa chỉ email có định dạng @gmail.com" required>
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" id="psw" required>
@@ -95,8 +95,12 @@
         <label for="psw-repeat"><b>Repeat Password</b></label>
         <input type="password" placeholder="Repeat Password" name="password-repeat" id="psw-repeat" required>
 
-        <label for="role"><b>Role</b></label>
-        <input type="text" placeholder="Enter your role" name="position" id="role" required>
+        <label><b>Role</b></label>
+        <select name="position">
+            <option value="KhachHang" selected>Client</option>
+            <option value="NhanVien" >Staff</option>
+            <option value="NhaCungCap">Supplier</option>
+        </select>
         <hr>
         <button type="submit" class="registerbtn">Register</button>
     </div>

@@ -260,7 +260,7 @@
 
 <body>
 <header>
-  <h2 class="logo">Logo</h2>
+  <h2 class="logo">BunBun</h2>
   <nav class="navigation">
     <a href="signin.jsp" class="btn btnLogin-popup">Sign in</a>
     <a href="signup.jsp" class="btn btnRegister-popup">Sign Up</a>

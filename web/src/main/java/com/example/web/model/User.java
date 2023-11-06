@@ -188,4 +188,20 @@ public class User {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", phone_number='" + phone_number + '\'' +
+                ", address='" + address + '\'' +
+                ", wage=" + wage +
+                ", position='" + position + '\'' +
+                '}';
+    }
 }
