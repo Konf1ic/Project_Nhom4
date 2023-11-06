@@ -28,7 +28,6 @@ public class SignUpServlet extends HttpServlet {
         if (action == null) {
             action = "";
         }
-        System.out.println(action);
         switch (action) {
             case "register":
                 try {
