@@ -95,5 +95,8 @@ public class SignUp_SignInServlet extends HttpServlet {
         req.getRequestDispatcher("signin.jsp").forward(req, resp);
 
     }
+<<<<<<< HEAD:web/src/main/java/com/example/web/controller/SignUp_SignInServlet.java
 
+=======
+>>>>>>> 9ef41a64e536af3b8b96cd381d4f95cb31a4aead:web/src/main/java/com/example/web/controller/SignUpServlet.java
 }
