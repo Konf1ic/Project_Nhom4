@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<%--
+  Created by IntelliJ IDEA.
+  User: chung
+  Date: 06/11/2023
+  Time: 1:28 CH
+  To change this template use File | Settings | File Templates.
+--%>
+>>>>>>> 355f1c2c1b0333aecf88f94f6d010d86802325c1
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,10 +130,22 @@
             color: #162938;
         }
 
-        * {box-sizing: border-box}
-        body {font-family: Verdana, sans-serif; margin:0}
-        .mySlides {display: none}
-        img {vertical-align: middle;}
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
 
         /* Slideshow container */
         .slideshow-container {
@@ -202,21 +224,28 @@
         }
 
         @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
         }
 
         /* On smaller screens, decrease text size */
         @media only screen and (max-width: 300px) {
-            .prev, .next,.text {font-size: 11px}
+
+            .prev, .next, .text {
+                font-size: 11px
+            }
         }
 
-        #background-content{
+        #background-content {
             width: 100%;
             height: 1000px;
         }
 
-        #head{
+        #head {
             width: 100%;
             height: 88px;
         }
@@ -225,6 +254,7 @@
 </head>
 <body>
 <div id="head">
+<<<<<<< HEAD
 <header>
     <h2 class="logo">Logo</h2>
     <div class="topnav">
@@ -293,16 +323,20 @@
         let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
     }
 </script>
 

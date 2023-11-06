@@ -128,10 +128,12 @@
                 width: 100%;
                 margin-top: 0;
             }
+
             /* hide the vertical line */
             .vl {
                 display: none;
             }
+
             /* show the hidden text on small screens */
             .hide-md-lg {
                 display: block;
@@ -142,7 +144,7 @@
 </head>
 <body>
 <div class="container">
-    <form>
+    <form method="post" action="/user?action=login">
         <div class="row">
             <h2 style="text-align:center">Sign in with Social Media or Manually</h2>
             <div class="vl">
@@ -186,6 +188,10 @@
     </div>
     <a href="home_page.jsp" style="color:white" class="btn">Home</a>
 </div>
-
+<script>
+    if (message != null) {
+        System.out.println(message);
+    }
+</script>
 </body>
 </html>
