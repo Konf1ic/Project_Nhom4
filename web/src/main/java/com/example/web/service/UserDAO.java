@@ -35,6 +35,5 @@ public class UserDAO implements UserService {
         System.out.println(user.getEmail());
         preparedStatement.setString(4, user.getPosition());
         preparedStatement.executeUpdate();
-        System.out.println("1");
     }
 }
