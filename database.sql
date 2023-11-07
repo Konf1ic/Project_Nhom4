@@ -1,11 +1,8 @@
-create
-database ecommerces;
+create database ecommerces;
 
-use
-ecommerces;
+use ecommerces;
 
-create table ecommerces
-(
+create table ecommerces(
     id           int auto_increment primary key,
     username     varchar(255) not null unique,
     password     varchar(255) not null,
