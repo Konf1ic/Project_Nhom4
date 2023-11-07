@@ -29,7 +29,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 110vh;
             background: #ffffff;
             flex-direction: column;
         }
@@ -178,7 +178,7 @@
 
         /* On hover, add a black background color with a little bit see-through */
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         /* Caption text */
@@ -250,62 +250,118 @@
             height: 88px;
         }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            gap: 2px;
+            background-color: #f1f1f1;
+            padding: 5px;
+        }
+
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px 0;
+            font-size: 30px;
+            padding-left: 15px;
+        }
+
     </style>
 </head>
 <body>
 <div id="head">
-<<<<<<< HEAD
-<header>
-    <h2 class="logo">Logo</h2>
-    <div class="topnav">
-        <div class="search-container">
-            <form action="">
-                <input type="text" placeholder="Search..." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+
+    <header>
+        <h2 class="logo">BunBun</h2>
+
+        <div class="topnav">
+            <div class="search-container">
+                <form action="">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <nav class="navigation">
+                <a href="#" class="btn btnSetting-popup">Setting</a>
+            </nav>
         </div>
-        <nav class="navigation">
-            <a href="#" class="btn btnSetting-popup">Setting</a>
-        </nav>
-    </div>
-</header>
+    </header>
 </div>
 
 <div id="background-content">
-<div id="content-container">
-    <div class="slideshow-container">
+    <div id="content-container">
+        <div class="slideshow-container">
 
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="Pic/1.jpg" style="width:100%;height: 300px">
-            <div class="text">Caption Text</div>
+            <div class="mySlides fade">
+                <img src="Pic/SlideBar/1.jpg" style="width:100%;height: 300px">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Pic/SlideBar/2.jpg" style="width:100%;height: 300px">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="Pic/SlideBar/3.jpg" style="width:100%;height: 300px">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)"><</a>
+            <a class="next" onclick="plusSlides(1)">></a>
+
         </div>
+        <br>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="Pic/2.jpg" style="width:100%;height: 300px">
-            <div class="text">Caption Two</div>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="Pic/3.jpg" style="width:100%;height: 300px">
-            <div class="text">Caption Three</div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)"><</a>
-        <a class="next" onclick="plusSlides(1)">></a>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-</div>
+    <div id="category">
+        <h3>Category</h3>
+
+        <div class="grid-container">
+            <div class="item1">
+                <img src="Pic/Category/clock.jpg" style="height: 50px;width: 50px">Watch
+            </div>
+            <div class="item2">
+                <img src="Pic/Category/ball.jpg" style="height: 50px;width: 50px">Ball
+            </div>
+            <div class="item3">
+                <img src="Pic/Category/book.jpg" style="height: 50px;width: 50px">Book
+            </div>
+            <div class="item4">
+                <img src="Pic/Category/electronic.jpg" style="height: 50px;width: 50px">Electronic
+            </div>
+            <div class="item5">
+                <img src="Pic/Category/pot.jpg" style="height: 50px;width: 50px">Pot
+            </div>
+            <div class="item6">
+                <img src="Pic/Category/beauty.jpg" style="height: 50px;width: 50px">Beauty
+            </div>
+            <div class="item7">
+                <img src="Pic/Category/men.jpg" style="height: 50px;width: 50px">Men
+            </div>
+            <div class="item8">
+                <img src="Pic/Category/women.jpg" style="height: 50px;width: 50px">Women
+            </div>
+            <div class="item9">
+                <img src="Pic/Category/phone.jpg" style="height: 50px;width: 50px">Phone
+            </div>
+            <div class="item10">
+                <img src="Pic/Category/toy.jpg" style="height: 50px;width: 50px">Toys
+            </div>
+            <div class="item11">
+                <img src="Pic/Category/backpack.jpg" style="height: 50px;width: 50px">Backpack
+            </div>
+            <div class="item12">
+                <img src="Pic/Category/shoes.jpg" style="height: 50px;width: 50px">Shoes
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     let slideIndex = 1;
