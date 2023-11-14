@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f1f04e1-be49-42f2-b97f-78e2d85826c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/VD_add/adminAddStaff.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/com/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/EditProduct/supplierEditProduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/EditProduct/testUpdate_Add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/SearchProduct/searchProduct.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/webapp/addProduct/supplierAdd.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
@@ -13,26 +17,17 @@
       <change beforePath="$PROJECT_DIR$/web/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/build/classes/java/main/com/controller/EcommerceServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/classes/java/main/com/controller/EcommerceServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/build/classes/java/main/com/model/Ecommerce.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/classes/java/main/com/model/Ecommerce.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/build/classes/java/main/com/service/EcommerceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/classes/java/main/com/service/EcommerceDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/build/classes/java/main/com/service/EcommerceIDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/classes/java/main/com/service/EcommerceIDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/build/libs/web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/libs/web-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/build/tmp/compileJava/compileTransaction/stash-dir/EcommerceDao.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/build/tmp/compileJava/compileTransaction/stash-dir/EcommerceServlet.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/tmp/compileJava/compileTransaction/stash-dir/EcommerceServlet.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/controller/EcommerceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/controller/EcommerceServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/model/Ecommerce.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/model/Ecommerce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/main/java/com/service/EcommerceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/service/EcommerceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/Add/adminAddStaff.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/admin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/home_page.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/searchAccount/search.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/signin.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/signup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/update/testUpdate.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/update/updateStaff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/service/EcommerceIDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/service/EcommerceIDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +57,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -218,7 +214,15 @@
       <workItem from="1698973897565" duration="6553000" />
       <workItem from="1698984986505" duration="330000" />
       <workItem from="1698985740138" duration="847000" />
-      <workItem from="1698993726411" duration="6682000" />
+      <workItem from="1698993726411" duration="8706000" />
+      <workItem from="1699232968445" duration="3978000" />
+      <workItem from="1699258525471" duration="3135000" />
+      <workItem from="1699323348723" duration="2858000" />
+      <workItem from="1699405454958" duration="3379000" />
+      <workItem from="1699491841545" duration="10387000" />
+      <workItem from="1699838135235" duration="766000" />
+      <workItem from="1699888617137" duration="5212000" />
+      <workItem from="1699923802578" duration="4528000" />
     </task>
     <servers />
   </component>
@@ -228,10 +232,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/web/src/main/java/com/controller/EcommerceServlet.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="1" />
+          <line>126</line>
+          <properties class="com.controller.EcommerceServlet" method="supplierEditProduct">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/web/src/main/java/com/controller/EcommerceServlet.java</url>
+          <line>189</line>
+          <properties class="com.controller.EcommerceServlet" method="supplierSearchProduct">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
